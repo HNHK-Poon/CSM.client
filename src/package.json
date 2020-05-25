@@ -1,0 +1,46 @@
+{
+  "name": "csm.client",
+  "version": "1.0.0",
+  "description": "CSM Client",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prepare-view": "rm -rf static/js/view.js",
+    "prepare-view-win": "del .\\static\\js\\view.js",
+    "prepare-script": "rm -rf app/index.js",
+    "prepare-script-win": "del .\\app\\index.js",
+    "build-view": "handlebars templates -f static/js/view.js",
+    "build-view-win": "handlebars templates -f .\\static\\js\\view.js",
+    "build-script": "browserify -t browserify-css static/js/index.js >> app/index.js",
+    "build-script-win": "browserify -t browserify-css .\\static\\js\\index.js >> .\\app\\index.js",
+    "cleanup-view": "rm -rf static/js/view.js",
+    "cleanup-view-win": "del .\\static\\js\\view.js",
+    "protect-script": "minify app/index.js -d app",
+    "run-app": "python3 application.py",
+    "run-app-win": "python application.py",
+    "start:win32": "npm run-script prepare-view-win && npm run-script prepare-script-win && npm run-script build-view-win && npm run-script build-script-win && npm run-script cleanup-view-win && npm run-script run-app-win",
+    "start:linux:darwin": "npm run-script prepare-view && npm run-script prepare-script && npm run-script build-view && npm run-script build-script && npm run-script cleanup-view && npm run-script run-app",
+    "start": "run-script-os"
+  },
+  "author": "Peter",
+  "license": "ISC",
+  "dependencies": {
+    "@zxing/library": "^0.15.2",
+    "bootstrap": "^4.3.1",
+    "browserify": "^16.5.0",
+    "browserify-css": "^0.15.0",
+    "crypto-js": "^3.1.9-1",
+    "font-awesome": "^4.7.0",
+    "handlebars": "^4.5.3",
+    "html2canvas": "^1.0.0-rc.5",
+    "jquery": "^3.4.1",
+    "md5": "^2.2.1",
+    "popper.js": "^1.16.0",
+    "run-script-os": "^1.0.7"
+  },
+  "devDependencies": {
+    "@fortawesome/fontawesome-free": "^5.11.2",
+    "babel-minify": "^0.5.1",
+    "babel-preset-minify": "^0.5.1"
+  }
+}

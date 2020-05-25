@@ -1,0 +1,42 @@
+<div class="column half_whole" style="width:45%">
+  <article class="card box_panel card_full">
+    <label class="card_label">
+      {{product_name}}
+    </label>
+    <section class="card_body">
+      <div class="graph">
+        <div class="knob_data">{{probability}}<span class="txt_smaller">%</span></div>
+        <svg class="graph_media" version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 266.4 266.4">
+          <g>
+            <path class="st0" d="M130.5,32.2V0c-53.3,1.1-99,33.5-119.3,79.6l30,11.8C56.7,57.3,90.7,33.3,130.5,32.2z"/>
+            <path class="st1" d="M133.2,0c-0.9,0-1.8,0-2.7,0v32.2c0.9,0,1.8,0,2.7,0c55.8,0,101,45.2,101,101s-45.2,101-101,101
+              s-101-45.2-101-101c0-14.9,3.2-29,9-41.7l-30-11.8C4,96,0,114.1,0,133.2c0,73.6,59.6,133.2,133.2,133.2s133.2-59.6,133.2-133.2
+              S206.7,0,133.2,0z"/>
+          </g>
+        </svg>
+      </div>
+    </section>
+    <section class="stats stats_row">
+        <div class="stats_item half_whole small_whole">
+          <div class="txt_faded">
+            <label class="txt_label space_n_b">
+              Category
+            </label>
+            <div class="txt_serif stats_item_number txt_success">
+              {{category}}
+            </div>
+          </div>
+        </div>
+        <div class="stats_item half_whole">
+          <div class="txt_faded">
+            <label class="txt_label space_n_b">
+              Product ID
+            </label>
+            <div class="txt_serif stats_item_number txt_error">
+              {{product_id}}
+            </div>
+          </div>
+        </div>
+    </section>
+  </article>
+</div>
